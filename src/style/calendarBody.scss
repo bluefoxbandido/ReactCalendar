@@ -1,0 +1,32 @@
+.calendar-wrapper {
+    border: 3px solid cornflowerblue;
+    width: 99.9%;
+
+    .days-wrapper, .blocks-wrapper {
+        display: grid;
+        grid-template-columns: repeat(7, 14vw);
+        grid-gap: .1vw;
+        justify-items: center;
+    }
+
+    .day-block {
+        height: 11vw;
+
+        textarea {
+            height: 80%;
+            width: 100%;
+        }
+    }
+    .filler {
+        color: darkgray;
+    }
+
+    .date {
+        font-size: 1vw;
+        padding-left: .2vw;
+    }
+    
+    h3 {
+        font-size: 2vw;
+    }
+}

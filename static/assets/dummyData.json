@@ -1,0 +1,86 @@
+{
+    "January": {
+        "month" : "January",
+        "year": "2019",
+        "daysInMonth": 31,
+        "daysInPreviousMonth": 31,
+        "startDay": "Tuesday"
+      },
+    "February": {
+        "month" : "Febraury",
+        "year": "2019",
+        "daysInMonth": 28,
+        "daysInPreviousMonth": 31,
+        "startDay": "Friday"
+      },
+    "March": {
+        "month" : "March",
+        "year": "2019",
+        "daysInMonth": 31,
+        "daysInPreviousMonth": 28,
+        "startDay": "Friday"
+      },
+    "April": {
+        "month" : "April",
+        "year": "2019",
+        "daysInMonth": 30,
+        "daysInPreviousMonth": 31,
+        "startDay": "Monday"
+      },
+    "May": {
+        "month" : "May",
+        "year": "2019",
+        "daysInMonth": 31,
+        "daysInPreviousMonth": 30,
+        "startDay": "Wednesday"
+      },
+    "June": {
+        "month" : "June",
+        "year": "2019",
+        "daysInMonth": 30,
+        "daysInPreviousMonth": 31,
+        "startDay": "Saturday"
+      },
+    "July": {
+        "month" : "July",
+        "year": "2019",
+        "daysInMonth": 31,
+        "daysInPreviousMonth": 30,
+        "startDay": "Monday"
+      },
+    "August": {
+        "month" : "August",
+        "year": "2019",
+        "daysInMonth": 31,
+        "daysInPreviousMonth": 31,
+        "startDay": "Thursday"
+      },
+    "September": {
+        "month" : "September",
+        "year": "2019",
+        "daysInMonth": 30,
+        "daysInPreviousMonth": 31,
+        "startDay": "Sunday"
+      },
+    "October": {
+        "month" : "October",
+        "year": "2019",
+        "daysInMonth": 31,
+        "daysInPreviousMonth": 30,
+        "startDay": "Tuesday"
+      },
+    "November": {
+        "month" : "November",
+        "year": "2019",
+        "daysInMonth": 30,
+        "daysInPreviousMonth": 31,
+        "startDay": "Friday"
+      },
+    "December": {
+        "month" : "December",
+        "year": "2019",
+        "daysInMonth": 31,
+        "daysInPreviousMonth": 30,
+        "startDay": "Monday"
+      }
+}
