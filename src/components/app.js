@@ -4,8 +4,22 @@ export default class App extends Component {
   render() {
     return (
       <div className='app'>
-        <h1>DevCamp React Starter</h1>
-        <h2>React Redux Router</h2>
+        <div className="header">
+            <button>Previous Month</button>
+            <h1>November</h1>
+            <button>Next Month</button>
+        </div>
+        <div className="calendar-wrapper">
+            <div className="days-wrapper">
+
+            </div>
+            <div className="blocks-wrapper">
+
+            </div>
+        </div>
+        <div className="footer">
+            <h1>2019</h1>
+        </div>
       </div>
     );
   }
