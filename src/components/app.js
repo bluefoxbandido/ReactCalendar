@@ -27,7 +27,7 @@ export default class App extends Component {
 
     this.handleMonthChange = this.handleMonthChange.bind(this)
   }
-  
+
   renderDays = () => {
     return this.days.map(day => <Weekday day={day} />)
   }
