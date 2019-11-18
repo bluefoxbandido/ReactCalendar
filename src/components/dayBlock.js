@@ -9,7 +9,7 @@ export default class DayBlock extends Component {
             noteExists: false
         } //End Constructor
         this.handleChange = this.handleChange.bind(this)
-        this.handleLoseFocus = this.handleChange.bind(this)
+        this.handleLoseFocus = this.handleLoseFocus.bind(this)
     }
     componentDidMount() {
         fetch(`http://127.0.0.1:5000/note/get/${this.props.date}/${this.props.month}/${this.props.year}`, {
@@ -35,49 +35,55 @@ export default class DayBlock extends Component {
         })
     }
     handleLoseFocus = () => {
-        if (!this.state.noteExists && this.state.text !== ""){
-            fetch(`http://127.0.0.1:5000/note/input/`, {
+        console.log("test")
+        //Post
+        if (this.state.noteExists == false && this.state.text !== "") {
+            fetch("http://127.0.0.1:5000/note/input", {
                 method: "POST",
-                headers: { "content-type": "application/json" },
+                headers: { "content-type": "application/json"},
                 body: JSON.stringify({
                     day: this.props.date,
                     month: this.props.month,
                     year: this.props.year,
-                    text:this.state.text
+                    text: this.state.text
                 })
             })
-            .then(response => {
+            .then(data => {
                 this.setState({
                     noteExists: true
                 })
             })
             .catch(error => {
-                console.log(error)
+                console.log("Error POSTING data: ", error)
             })
-        } else if (this.state.noteExists && this.state.text !== ""){
+        }
+
+        //Put
+        else if(this.state.noteExists == true && this.state.text !== "") {
             fetch(`http://127.0.0.1:5000/note/update/${this.props.date}/${this.props.month}/${this.props.year}`, {
                 method: "PUT",
-                headers: { "content-type": "application/json" },
+                headers: { "content-type": "application/json"},
                 body: JSON.stringify({
                     text: this.state.text
                 })
             })
             .catch(error => {
-                console.log(error)
+                console.log("Error UPDATING data: ", error)
             })
-        } else if(this.state.noteExists && this.state.text === ""){
-            
-            fetch(`http://127.0.0.1:5000/note/get/${this.props.date}/${this.props.month}/${this.props.year}`, {
-                method: "DELETE",
-                headers: { "content-type": "application/json" }
+        }
+
+        //Delete
+        else if(this.state.noteExists == true && this.state.text === "") {
+            fetch(`http://127.0.0.1:5000/note/delete/${this.props.date}/${this.props.month}/${this.props.year}`, {
+                method: "DELETE"
             })
-            .then(response => {
+            .then(data => {
                 this.setState({
                     noteExists: false
                 })
             })
             .catch(error => {
-                console.log(error)
+                console.log("Error DELETING data: ", error)
             })
         }
     }
